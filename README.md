@@ -15,3 +15,22 @@ To add ES6 transpile, add .babelrc file:
   "presets": ["@babel/preset-env", "@babel/preset-react"]
 }
 ```
+
+## Webpack
+
+First install webpack and relevant dependencies:
+
+```powershell
+  npm install --save-dev webpack webpack-cli webpack-dev-server style-loader css-loader babel-loader
+```
+
+To add webpack.config file:
+
+- webpack.config uses ES5 javascript syntax
+- webpack uses loaders to transpile our code for example to transform ES6 to regular javascript webpack uses 'babel-loader', similarly, for css styles uses 'style-loader', 'css-loader'
+
+After adding webpack configuration to run your webpack dev server run:
+
+```powershell
+  npx webpack-dev-server --mode development
+```

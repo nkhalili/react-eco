@@ -34,3 +34,19 @@ After adding webpack configuration to run your webpack dev server run:
 ```powershell
   npx webpack-dev-server --mode development
 ```
+
+## Hot-loader
+
+To automatically refresh page after each changes:
+
+```powershell
+  npm install --save-dev react-hot-loader
+```
+
+Then import and use in App.js as follow:
+
+```javascript
+  import hot from 'react-hot-loader';
+  ...
+  export default hot(module)(App);
+```

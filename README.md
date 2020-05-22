@@ -46,7 +46,7 @@ To automatically refresh page after each changes:
 Then import and use in App.js as follow:
 
 ```javascript
-  import hot from 'react-hot-loader';
+  import { hot } from 'react-hot-loader';
   ...
   export default hot(module)(App);
 ```

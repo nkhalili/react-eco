@@ -50,3 +50,26 @@ Then import and use in App.js as follow:
   ...
   export default hot(module)(App);
 ```
+
+## Redux
+
+1. To install Redux:
+
+   ```powershell
+     npm install redux react-redux
+   ```
+
+2. Create store.js file inside src folder
+3. Wrap App component in index.js with Provider from redux.
+
+   ```javascript
+    import { Provider } from 'react-redux';
+    import { configureStore } from './store';
+    ...
+    render(
+      <Provider store={configureStore()}>
+        <App />
+      </Provider>,
+      document.getElementById('root')
+    );
+   ```

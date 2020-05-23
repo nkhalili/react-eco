@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './NewTodoForm.css';
 
 const NewTodoForm = () => {
-  const [inputValue, setInputValue] = setState('');
+  const [inputValue, setInputValue] = useState('');
 
   return (
     <div className="new-todo-form">

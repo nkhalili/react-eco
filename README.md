@@ -73,3 +73,14 @@ Then import and use in App.js as follow:
       document.getElementById('root')
     );
    ```
+
+## Redux-persist
+
+1. To persist redux state, install:
+
+   ```powershell
+     npm install redux-persist
+   ```
+
+2. Add *persistReducer*, *storage*, and *autoMergeLevel2* in store.js
+3. Add *persistStore* and *PersistGate* in index.js

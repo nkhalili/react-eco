@@ -84,3 +84,16 @@ Then import and use in App.js as follow:
 
 2. Add *persistReducer*, *storage*, and *autoMergeLevel2* in store.js
 3. Add *persistStore* and *PersistGate* in index.js
+
+## Redux Dev Tools
+
+To connect your app to Redux Dev Tools, configureStore like this inside store.js:
+
+```javascript
+  ...
+  export const configureStore = () =>
+    createStore(
+      persistedReducer,
+      window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    );
+```

@@ -97,3 +97,11 @@ To connect your app to Redux Dev Tools, configureStore like this inside store.js
       window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
     );
 ```
+
+## Redux Best Practices
+
+1. Always export your component with and without connect functionality (for testing purposes).
+2. Keep Redux actions and async operations (e.g. fetching data) out of your reducers.
+   1. Reducers must just get the current state and combine it with an action to get the updated state.
+3. Think about connecting components.
+   1. Avoid connecting your component directly to the store if you want to reuse it with different data. Instead, you should have a parent component which is connected to the store, and passes a correct data to the reusable components.

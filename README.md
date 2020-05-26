@@ -105,3 +105,25 @@ To connect your app to Redux Dev Tools, configureStore like this inside store.js
    1. Reducers must just get the current state and combine it with an action to get the updated state.
 3. Think about connecting components.
    1. Avoid connecting your component directly to the store if you want to reuse it with different data. Instead, you should have a parent component which is connected to the store, and passes a correct data to the reusable components.
+
+## Redux Thunk
+
+To manage Redux side-effects. e.g. adding logic to your action calls, etc.
+
+1. To install redux-thunk and required packages:
+
+   ```powershell
+     npm install redux-thunk redux-devtools-extension @babel/runtime
+   ```
+
+   - redux-devtools-extension: to add thunk middleware to our store
+   - @babel/runtime: to make our async thunks work
+
+2. We also need to install this package (development version of babel):
+
+   ```powershell
+     npm install --save-dev @babel/plugin-transform-runtime
+   ```
+
+3. Add "plugins" section to your .babelrc file
+4. Modify store.js file

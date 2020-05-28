@@ -127,3 +127,7 @@ To manage Redux side-effects. e.g. adding logic to your action calls, etc.
 
 3. Add "plugins" section to your .babelrc file
 4. Modify store.js file
+
+### What is a Thunk
+
+In redux a **thunk** is a function that returns another function which contains the actual logic that we want to perform when it is triggered.  

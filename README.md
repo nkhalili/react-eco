@@ -139,6 +139,7 @@ In redux a **thunk** is a function that returns another function which contains 
 |Component  |Display data       |
 |Reducers   |Manage state       |
 |Thunks     |Side-effect logic  |
+|Reselectors|Abstracting the state's format  |
 
 ## Reselect
 
@@ -159,4 +160,10 @@ You can pass as many selectors as you want for the first argument, then use a fu
     (todos, isLoading) =>
     isLoading ? [] : todos.filter((todo) => !todo.isCompleted)
   );
+```
+
+## Styled-components
+
+```powershell
+  npm install styled-components
 ```

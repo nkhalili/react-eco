@@ -3,24 +3,28 @@ import TodoListItem from './TodoListItem';
 import './TodoList.css';
 import NewTodoForm from './NewTodoForm';
 import { connect } from 'react-redux';
+import styled from 'styled-components';
 import {
   loadTodos,
   removeTodoRequest,
   markTodoAsCompletedRequest,
 } from './thunks';
 import {
-  getTodos,
   getTodosLoading,
   getCompletedTodos,
   getIncompleteTodos,
 } from './selectors';
+
+const BigRedText = styled.div`
+  font-size: 48px;
+  color: #ff0000;
+`;
 
 const TodoList = ({
   completedTodos,
   incompletedTodos,
   onRemovePressed,
   onCompletedPressed,
-  onDisplayAlertClicked,
   isLoading,
   startLoadingTodos,
 }) => {
@@ -31,6 +35,7 @@ const TodoList = ({
   const loadingMessage = <div>Loading todos...</div>;
   const content = (
     <div className="list-wrapper">
+      <BigRedText>I'm a styled component.</BigRedText>
       <NewTodoForm />
       <h3>Incomplete:</h3>
       {incompletedTodos.map((todo) => (

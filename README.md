@@ -139,3 +139,24 @@ In redux a **thunk** is a function that returns another function which contains 
 |Component  |Display data       |
 |Reducers   |Manage state       |
 |Thunks     |Side-effect logic  |
+
+## Reselect
+
+A tool to building **more complex logic** on top of simpler selectors, and even combine different selectors.
+
+```powershell
+  npm install reselect
+```
+
+You can pass as many selectors as you want for the first argument, then use a function to get the result of all of them as parameters.
+
+- getIncompleteTodos is a higher order selector. Has no idea how the data is formatted in Redux Store.
+
+```javascript
+  export const getIncompleteTodos = createSelector(
+    getTodos,
+    getTodosLoading,
+    (todos, isLoading) =>
+    isLoading ? [] : todos.filter((todo) => !todo.isCompleted)
+  );
+```

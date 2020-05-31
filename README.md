@@ -131,3 +131,11 @@ To manage Redux side-effects. e.g. adding logic to your action calls, etc.
 ### What is a Thunk
 
 In redux a **thunk** is a function that returns another function which contains the actual logic that we want to perform when it is triggered.  
+
+## Separation of Concerns
+
+| Name      | Usage
+|-----------|-------------------|
+|Component  |Display data       |
+|Reducers   |Manage state       |
+|Thunks     |Side-effect logic  |

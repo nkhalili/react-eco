@@ -8,6 +8,7 @@ import {
   removeTodoRequest,
   markTodoAsCompletedRequest,
 } from './thunks';
+import { getTodos, getTodosLoading } from './selectors';
 
 const TodoList = ({
   todos = [],
@@ -39,8 +40,8 @@ const TodoList = ({
 };
 
 const mapStateToProps = (state) => ({
-  isLoading: state.isLoading,
-  todos: state.todos,
+  isLoading: getTodosLoading(state),
+  todos: getTodos(state),
 });
 
 const mapDispatchToProps = (dispatch) => ({

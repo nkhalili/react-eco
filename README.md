@@ -167,3 +167,12 @@ You can pass as many selectors as you want for the first argument, then use a fu
 ```powershell
   npm install styled-components
 ```
+
+## Test frameworks
+
+```powershell
+  npm install --save-dev mocha chai
+  npm install --save-dev @babel/register
+```
+
+- @babel/register: to make test able to run modern babel code

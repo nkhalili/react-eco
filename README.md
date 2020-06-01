@@ -176,3 +176,11 @@ You can pass as many selectors as you want for the first argument, then use a fu
 ```
 
 - @babel/register: to make test able to run modern babel code
+
+To test our **thunks**, we use these packages:
+
+```powershell
+  npm install --save-dev sinon node-fetch fetch-mock
+```
+
+- sinon: to create a fake function that we can pass in that keeps track of what arguments it was called with. (for dispatch function)
